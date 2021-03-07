@@ -1,0 +1,377 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="prism.min.css"  />
+  <script language="JavaScript" type="application/javascript"  src="jquery.js"></script>
+    <script  language="JavaScript" type="application/javascript" src="handler.js"></script>
+   
+    <script  language="JavaScript" type="application/javascript" src="xel.min.js"></script>
+ 
+ 
+    <style>
+
+
+.paramb {
+	box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	background-color:#a73f2d;
+	border-radius:10px;
+	border:1px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #7a2a1d;
+}
+.paramb:hover {
+	background-color:#b34332;
+}
+.paramb:active {
+	position:relative;
+	top:1px;
+}
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+body input[type=url]{
+
+ height:40px;
+ width:400px;
+ border-radius: 10px;
+}
+#method{
+  height:36px;
+ 
+ border-radius: 10px;
+}
+
+
+
+
+body input[type=text]  {
+  border: 2px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 10px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 11px 0;
+}
+
+
+
+
+
+
+
+
+
+      table.mytable {
+  border: 1px solid #1C6EA4;
+  background-color: #EEEEEE;
+  text-align: center;
+}
+table.mytable td, table.mytable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+table.mytable tbody td {
+  font-size: 13px;
+}
+table.mytable thead {
+  background: rgb(45, 47, 48);
+  background: -moz-linear-gradient(top, #4b6c82 0%, #274e68 66%, #0F3B58 100%);
+  background: -webkit-linear-gradient(top, #4b6c82 0%, #274e68 66%, #0F3B58 100%);
+  background: linear-gradient(to bottom, #4b6c82 0%, #274e68 66%, #0F3B58 100%);
+  border-bottom: 2px solid #444444;
+}
+table.mytable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #5D666E;
+}
+table.mytable thead th:first-child {
+  border-left: none;
+}
+
+table.mytable tfoot td {
+  font-size: 14px;
+}
+table.mytable tfoot .links {
+  text-align: center;
+}
+table.mytable tfoot .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+      .grid-container {
+        
+        display: grid;
+
+        grid-template-columns: 34% 34% 34%;
+
+        padding: 2px;
+        margin: 5px;
+      }
+      ::placeholder {
+  text-align: center;
+}
+body input[type="text"]{
+  text-align: center
+}
+body input[type="url"]{
+  text-align: center
+}
+      .grid-item h1 {
+        text-align: center;
+      }
+      .grid-item pre,
+      p {
+        text-align: center;
+        font-size: 15px;
+        height: 100%;
+      }
+      
+.send{
+  height: 300px;
+  width:100%;
+  background-color: #f5f2f0;
+  font-size: 15px;
+}
+
+
+      
+
+      .grid-item {
+     
+        height: 300px;
+        width: 90%;
+        overflow: scroll;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 0px;
+        font-size: 10px;
+        text-align: left;
+        margin: 10px;
+        border-radius: 10px 10px 10px 10px;
+    
+        
+      }
+     .grid-item::-webkit-scrollbar { 
+   
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+ 
+    display: none;  /* Safari and Chrome */
+
+    }
+    </style>
+  </head>
+  <body style="background-color: rgb(61, 61, 61);margin:0px">
+    <div
+      id="outer"
+      style="background-color: rgb(61, 61, 61); height: 100%; width: 100%;"
+    >
+      <div
+        id="header-outer"
+        style="height: 80px; background-color: rgb(37, 37, 37); width: 100%;"
+      >
+        <div
+          id="header-left"
+          style="height: 100%; width: 80%; line-height: 80px; color: white;float:left"
+        >
+          <h1 style="margin-top: -5px;"> &nbsp;&nbsp;&nbsp;&nbsp; Rest API Tester</h1>
+        </div>
+        <script type="text/javascript">
+          function cll(){
+            location.reload();
+          }
+          </script>
+        <div id="header-right"><button onclick="cll()" id="reset" style="float:right;margin-right: 10px;margin-top: 20px;">Reset</button></div>
+      </div>
+      <div id="main-body" style="height: auto; width: 100%;">
+        <br />
+        <center>
+          <div id="url-box" style="width: 100%; height: auto;">
+            <br />
+            <input type="url" id="url" placeholder="Enter your url here" />
+            <select id="method" name="method">
+              <option value="GET">GET</option>
+              <option value="POST">POST</option>
+              <option value="PUT">PUT</option>
+              <option value="DELETE">DELETE</option>
+              <option value="PATCH">PATCH</option>
+            </select>
+            <br>
+            <br>
+            <button class="paramb" id="show">Set Parameters (optional) </button>
+            <br />
+            <br />
+            <input class="paramb" type="button" id="button" value="Make request" />
+          </div>
+        </center>
+      </div>
+      <center>
+        <div id="instructions" style="height:200px;width:800px;color: cornsilk;">
+        <center><h2>Quick guide</h2>
+        <h4>1. Enter the  URL which you need to target. For Ex- http://localhost:3000 </h4>
+        <h4>2. If you want to add certain payload ,  body or params to the request , click on Set Prameters button</h4>
+        <h4>3. After setting all the parameters , just click on make request button to genrated response output</h4>
+      <h4>>> In case of any difficulty , Just hit reset button to make fresh request <<</h4> 
+      </center>
+                </div>
+      </center>
+      <center>
+        <div id="extra-outer" style="height:400px;width:100%;display: none;">
+          <div class="grid-container">
+            <div class="grid-item">
+              <h1 class="ip"> Set request Header</h1>
+              <table class="mytable">
+                <thead>
+                <tr>
+                <th>Header name</th>
+                <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td><input type="text" placeholder="Name 1" id="h1" style="width:95%"></td>
+                <td><input type="text" placeholder="Value 1" id="v1" style="width:95%"></td>
+                </tr>
+                <tr>
+                  <td><input type="text" placeholder="Name 2" id="h2" style="width:95%"></td>
+                  <td><input type="text" placeholder="Value 2" id="v2" style="width:95%"></td>
+                </tr>
+                <tr>
+                  <td><input type="text" placeholder="Name 3" id="h3" style="width:95%"></td>
+                  <td><input type="text" placeholder="Value 3" id="v3" style="width:95%"></td>
+                </tr>
+                <tr>
+                  <td><input type="text" placeholder="Name 4" id="h4" style="width:95%"></td>
+                  <td><input type="text" placeholder="Value 4" id="v4" style="width:95%"></td>
+                </tr>
+                <tr>
+                  <td><input type="text" placeholder="Name 5" id="h5" style="width:95%"></td>
+                  <td><input type="text" placeholder="Value 5" id="v5" style="width:95%"></td>
+                </tr>
+                <tr>
+                  <td><input type="text" placeholder="Name 6" id="h6" style="width:95%"></td>
+                  <td><input type="text" placeholder="Value 6" id="v6" style="width:95%"></td>
+                </tr>
+                <tr>
+                  <td><input  type="text" placeholder="Name 7" id="h7" style="width:95%"></td>
+                <td><input type="text" placeholder="Value 7" id="v7" style="width:95%"></td>
+                  </tr>
+                </tbody>
+                </table>
+              
+            </div>
+            <div class="grid-item">
+              <h1 class="ip">Set request body</h1>
+
+              
+                <textarea placeholder=" &#10 { key : value }  &#10 &#10 Double check the JSON body payload" type="text" data-hj-whitelist="" class="send" id="request-body"></textarea>
+          
+          </div>
+          <div class="grid-item">
+            <h1 class="ip">Set request prameters</h1>
+            
+            <table class="mytable">
+              <thead>
+              <tr>
+              <th>Parameter name</th>
+              <th>Value</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+              <td><input type="text" placeholder="Parameter 1" id="hp1" style="width:95%"></td>
+              <td><input type="text" onmouseout="onkeyfirst()" placeholder="Value 1" id="vp1" style="width:95%"></td>
+              </tr>
+              <tr>
+                <td><input type="text" placeholder="Parameter 2" id="hp2" style="width:95%"></td>
+                <td><input type="text" onmouseout="onkeysec()" placeholder="Value 2" id="vp2" style="width:95%"></td>
+              </tr>
+              <tr>
+                <td><input type="text" placeholder="Parameter 3" id="hp3" style="width:95%"></td>
+                <td><input type="text"  onmouseout="onkeythird()"  placeholder="Value 3" id="vp3" style="width:95%"></td>
+              </tr>
+              <tr>
+                <td><input type="text" placeholder="Parameter 4" id="hp4" style="width:95%"></td>
+                <td><input type="text" onmouseout="onkeyfourth()" placeholder="Value 4" id="vp4" style="width:95%"></td>
+              </tr>
+              <tr>
+                <td><input type="text" placeholder="Parameter 5" id="hp5" style="width:95%"></td>
+                <td><input type="text" onmouseout="onkeyfive()" placeholder="Value 5" id="vp5" style="width:95%"></td>
+              </tr>
+              <tr>
+                <td><input type="text" placeholder="Parameter 6" id="hp6" style="width:95%"></td>
+                <td><input type="text" onmouseout="onkeysix()" placeholder="Value 6" id="vp6" style="width:95%"></td>
+              </tr>
+              <tr>
+                <td><input  type="text" placeholder="Parameter 7" id="hp7" style="width:95%"></td>
+              <td><input type="text" onmouseout="onkeysix()" placeholder="Value 7" id="vp7" style="width:95%"></td>
+                </tr>
+              </tbody>
+              </table>
+            
+          </div>
+        </div>
+        </div>
+        <div id="output-outer" style="height: 400px; width: 100%;display: none;">
+          <div class="grid-container">
+            <div class="grid-item">
+              <h1>Response Header</h1>
+              <pre><code id="header" class="language-css">
+              
+              </code></pre>
+            </div>
+            <div class="grid-item">
+              <h1>Response Page</h1>
+
+              <div style="background-color:#f5f2f0;height:auto"> <br />
+              <p id="repo"></p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <h1>Response Status</h1>
+
+            <div style="background-color: #f5f2f0;height:auto">
+              <br />
+              <p id="res-h"></p>
+            </div>
+          </div>
+        </div>
+      </center>
+      <center><h5 style="color:whitesmoke">&copy;Avinash Chandravansi &nbsp;&nbsp;&nbsp; Made with &hearts; using Node.js and Electron</h5></center>
+    </div>
+
+
+
+   
+
+  </body>
+</html>
